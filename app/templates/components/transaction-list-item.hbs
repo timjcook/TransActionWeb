@@ -1,0 +1,20 @@
+<div class='transaction-list-item'>
+  <div>
+    <p>{{transaction.description}}</p>
+    <p>${{transaction.amount}}</p>
+    <p>{{transaction.date}}</p>
+  </div>
+
+  <div>
+    {{#if transaction.category}}
+      {{transaction.category.name}}
+    {{else}}
+      {{#x-select value=transaction.category action=(action "selectCategory") as |xs|}}
+        {{#xs.option value=""}}Select a category{{/xs.option}}
+        {{#each categories as |category|}}
+          {{#xs.option value=category}}{{category.name}}{{/xs.option}}
+        {{/each}}
+      {{/x-select}}
+    {{/if}}
+  </div>
+</div>
