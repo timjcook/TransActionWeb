@@ -1,0 +1,5 @@
+<h1>Transactions for interval</h1>
+<h2>{{moment-format intervalStart 'DD/MM/YYYY'}} - {{moment-format intervalEnd 'DD/MM/YYYY'}}</h2>
+
+{{interval-bar-chart transactions=transactions intervalStart=intervalStart intervalEnd=intervalEnd}}
+{{interval-pie-chart transactions=transactions categories=categories intervalStart=intervalStart intervalEnd=intervalEnd}}
