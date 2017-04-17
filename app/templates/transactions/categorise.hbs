@@ -1,0 +1,8 @@
+<div class='transaction-list'>
+  {{#each transactions as |transaction|}}
+    {{transaction-list-item transaction=transaction categories=categories selectCategory="selectCategory"}}
+  {{/each}}
+</div>
+<div class='transaction-list-actions'>
+  {{#link-to 'transactions.breakdown'}}Done{{/link-to}}
+</div>
