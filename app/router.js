@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('transactions', function() {
+    this.route('categorise');
+    this.route('breakdown');
+  });
 });
 
 export default Router;
